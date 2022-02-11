@@ -15,3 +15,18 @@ categories = ["algorithms", "cryptography", "no-std"]
 
 [dependencies]
 sodalite = "0.4.0"
+
+[dev-dependencies]
+proptest = "1.0.0"
+
+[features]
+default = []
+
+# Enable `safe_box_keypair` wrapper for `sodalite::box_keypair`, which depends on sodalite's `rand` feature.
+rand = ["sodalite/rand"]
+
+# XXX: sodalite (as of 0.4.0) depends heavily on compiler optimisation for reasonable performance.
+#      Without optimisation, the proptest-based tests may take minutes to complete.
+#      With optimisation level 2, the tests complete within seconds.
+[profile.test.package.sodalite]
+opt-level = 2
