@@ -1,0 +1,17 @@
+[package]
+name = "rusty-sodalite"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.56"
+
+authors = ["Pi Delport <pjdelport@gmail.com>"]
+description = "A Rust-friendly wrapper around the low-level sodalite API"
+repository = "https://github.com/PiDelport/rusty-sodalite"
+license = "Apache-2.0 OR MIT"
+keywords = ["cryptography", "nacl", "no_std", "sodium", "tweetnacl"]
+categories = ["algorithms", "cryptography", "no-std"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sodalite = "0.4.0"
