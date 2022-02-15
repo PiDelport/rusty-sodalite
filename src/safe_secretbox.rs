@@ -19,13 +19,13 @@ use alloc::boxed::Box;
 use alloc::vec;
 use core::option::Option;
 
-use crate::macros::type_wrapper;
+use crate::macros::newtype_wrapper;
 use crate::padding_constants;
 use crate::padding_helpers::{pad_zeroes, unpad_zeroes};
 use crate::types::{Ciphertext, Plaintext};
 
-type_wrapper!(SafeSecretboxKey, sodalite::SecretboxKey);
-type_wrapper!(SafeSecretboxNonce, sodalite::SecretboxNonce);
+newtype_wrapper!(SafeSecretboxKey, sodalite::SecretboxKey);
+newtype_wrapper!(SafeSecretboxNonce, sodalite::SecretboxNonce);
 
 /// Encrypt and authenticate a message using `key`.
 ///

@@ -15,11 +15,11 @@ use alloc::vec;
 
 use sodalite::SignPublicKey;
 
-use crate::macros::type_wrapper;
+use crate::macros::newtype_wrapper;
 use crate::types::{SafeSecureSeed, SignedMessage, UnsignedMessage, VerifiedMessage};
 
-type_wrapper!(SafeSignPublicKey, sodalite::SignPublicKey);
-type_wrapper!(SafeSignSecretKey, sodalite::SignSecretKey);
+newtype_wrapper!(SafeSignPublicKey, sodalite::SignPublicKey);
+newtype_wrapper!(SafeSignSecretKey, sodalite::SignSecretKey);
 
 /// Generate a new random secret key and corresponding public key.
 #[cfg(feature = "rand")]

@@ -5,7 +5,7 @@
 //! The [`SafeSecureSeed`] wrapper is intended to act as a type-safe barrier to remind that only
 //! cryptographically secure random bytes should be wrapped in it.
 
-use crate::macros::type_wrapper;
+use crate::macros::newtype_wrapper;
 
 /// An unencrypted message.
 pub type Plaintext = [u8];
@@ -27,4 +27,4 @@ pub type VerifiedMessage = [u8];
 /// The seed should be uniformly random and generated with a secure random number generator.
 pub type SecureSeed = [u8; 32];
 
-type_wrapper!(SafeSecureSeed, SecureSeed);
+newtype_wrapper!(SafeSecureSeed, SecureSeed);

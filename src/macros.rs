@@ -8,7 +8,7 @@
 /// - [`AsRef`] to reference the wrapped array
 ///
 /// [newtype]: https://rust-unofficial.github.io/patterns/patterns/behavioural/newtype.html
-macro_rules! type_wrapper {
+macro_rules! newtype_wrapper {
     ($newtype_name:ident, $array_type_name:ty) => {
         #[derive(Clone)]
         #[repr(transparent)]
@@ -28,4 +28,4 @@ macro_rules! type_wrapper {
     };
 }
 
-pub(crate) use type_wrapper;
+pub(crate) use newtype_wrapper;

@@ -42,14 +42,14 @@ use core::option::Option;
 
 use sodalite::{BoxPublicKey, BoxSecretKey};
 
-use crate::macros::type_wrapper;
+use crate::macros::newtype_wrapper;
 use crate::padding_constants;
 use crate::padding_helpers::{pad_zeroes, unpad_zeroes};
 use crate::types::{Ciphertext, Plaintext, SafeSecureSeed};
 
-type_wrapper!(SafeBoxPublicKey, sodalite::BoxPublicKey);
-type_wrapper!(SafeBoxSecretKey, sodalite::BoxSecretKey);
-type_wrapper!(SafeBoxNonce, sodalite::BoxNonce);
+newtype_wrapper!(SafeBoxPublicKey, sodalite::BoxPublicKey);
+newtype_wrapper!(SafeBoxSecretKey, sodalite::BoxSecretKey);
+newtype_wrapper!(SafeBoxNonce, sodalite::BoxNonce);
 
 /// Generate a new random secret key and corresponding public key.
 #[cfg(feature = "rand")]
