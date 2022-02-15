@@ -42,7 +42,7 @@ pub fn safe_sign_keypair_seed(seed: &SafeSecureSeed) -> (SafeSignPublicKey, Safe
 
 /// Sign a message using `secret_key`.
 ///
-/// This wraps [`sodalite::signed_message`].
+/// This wraps [`sodalite::sign_attached`].
 pub fn safe_sign_attached(
     unsigned_message: &UnsignedMessage,
     secret_key: &SafeSignSecretKey,
@@ -57,7 +57,7 @@ pub fn safe_sign_attached(
 
 /// Verify a message signed `secret_key`.
 ///
-/// This wraps [`sodalite::signed_message_open`].
+/// This wraps [`sodalite::sign_attached_open`].
 pub fn safe_sign_attached_open(
     signed_message: &SignedMessage,
     public_key: &SafeSignPublicKey,

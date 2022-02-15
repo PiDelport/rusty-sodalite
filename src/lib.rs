@@ -1,8 +1,8 @@
 //!
 //! # External documentation
 //!
-//! - https://tweetnacl.cr.yp.to/
-//! - https://nacl.cr.yp.to/
+//! - <https://tweetnacl.cr.yp.to/>
+//! - <https://nacl.cr.yp.to/>
 
 #![no_std]
 
