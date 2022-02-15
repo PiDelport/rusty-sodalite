@@ -1,8 +1,8 @@
 //! Helper macros.
 
-/// Declare a [newtype] wrapper for the given array type alias.
+/// Declare a [newtype] wrapper for the given array type.
 ///
-/// # Trait implementations
+/// The wrapper implements:
 ///
 /// - [`From`] to wrap an array
 /// - [`AsRef`] to reference the wrapped array
